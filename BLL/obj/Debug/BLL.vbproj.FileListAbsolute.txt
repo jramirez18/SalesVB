@@ -1,0 +1,12 @@
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\BLL.dll
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\BLL.pdb
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\BLL.xml
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\DAL.dll
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\DAL.pdb
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\bin\Debug\DAL.xml
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.Resources.resources
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.dll
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.xml
+H:\2020\VB\SistemaVentasVB_CAPAS\BLL\obj\Debug\BLL.pdb

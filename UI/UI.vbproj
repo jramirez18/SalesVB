@@ -79,6 +79,12 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMenuVentas.Designer.vb">
+      <DependentUpon>frmMenuVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuVentas.resx">
+      <DependentUpon>frmMenuVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.vb</DependentUpon>

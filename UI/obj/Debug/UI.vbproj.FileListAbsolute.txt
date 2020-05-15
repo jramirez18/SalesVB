@@ -17,3 +17,4 @@ H:\2020\VB\SistemaVentasVB_CAPAS\UI\obj\Debug\UI.exe
 H:\2020\VB\SistemaVentasVB_CAPAS\UI\obj\Debug\UI.xml
 H:\2020\VB\SistemaVentasVB_CAPAS\UI\obj\Debug\UI.pdb
 H:\2020\VB\SistemaVentasVB_CAPAS\UI\obj\Debug\UI.frmLogin.resources
+H:\2020\VB\SistemaVentasVB_CAPAS\UI\obj\Debug\UI.frmMenuVentas.resources

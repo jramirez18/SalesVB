@@ -5,7 +5,7 @@ Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         pnlLogin.Visible = False
-        pnlRecuperarPass.Visible = False
+        pnlRestaurarPassword.Visible = False
         pnlUsuarios.Visible = True
         DibujarUsuariosActivos()
         'Centrar la posicion de los paneles
@@ -54,7 +54,7 @@ Public Class frmLogin
                 p1.Controls.Add(I1)
                 b.BringToFront()
 
-                lblContador.Controls.Add(p1)
+                flpUsuarios.Controls.Add(p1)
                 AddHandler b.Click, AddressOf miEventoLabel
                 AddHandler I1.Click, AddressOf miEventoImagen
             End While
@@ -89,7 +89,7 @@ Public Class frmLogin
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
         ValidarUsuarios()
         Contar()
-        If lblContador.Text > 0 Then
+        If flpUsuarios.Text > 0 Then
             Me.Hide()
             Dim frm As frmMenuVentas = New frmMenuVentas
             frm.ShowDialog()
@@ -110,7 +110,7 @@ Public Class frmLogin
     Sub Contar()
         Dim x As Integer
         x = dgvUsuarios.Rows.Count
-        lblContador.Text = CStr(x)
+        flpUsuarios.Text = CStr(x)
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -186,4 +186,37 @@ Public Class frmLogin
         MessageBox.Show("Usuario o contraseña Incorrectos", "Datos Incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
     End Sub
 
+    Private Sub btnRecuperarPass_Click(sender As Object, e As EventArgs) Handles btnRecuperarPass.Click
+        pnlRestaurarPassword.Location = New Point((Width - pnlRestaurarPassword.Width) / 2, (Height - pnlRestaurarPassword.Height) / 2)
+        pnlRestaurarPassword.Visible = True
+        pnlUsuarios.Visible = False
+        pnlLogin.Visible = False
+        MostrarCorreo()
+    End Sub
+
+    Sub MostrarCorreo()
+        Try
+            cboCorreo.DataSource = usuario.CorreosActivos()
+            cboCorreo.ValueMember = "correo"
+            cboCorreo.DisplayMember = "correo"
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnEnviar_Click(sender As Object, e As EventArgs) Handles btnEnviar.Click
+        ObtenerPassword()
+    End Sub
+
+    Sub ObtenerPassword()
+        Dim pass As String
+        Try
+            pass = usuario.ObtenerPassword(cboCorreo.SelectedValue)
+
+            lblPassword.Text = Desencriptar(pass)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message.ToString)
+        End Try
+    End Sub
 End Class

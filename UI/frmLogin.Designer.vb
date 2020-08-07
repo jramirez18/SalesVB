@@ -26,7 +26,7 @@ Partial Class frmLogin
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.lblNombreSW = New System.Windows.Forms.Label()
         Me.pnlUsuarios = New System.Windows.Forms.Panel()
-        Me.lblContador = New System.Windows.Forms.FlowLayoutPanel()
+        Me.flpUsuarios = New System.Windows.Forms.FlowLayoutPanel()
         Me.lblTituloSesion = New System.Windows.Forms.Label()
         Me.pnlRecuperarPass = New System.Windows.Forms.Panel()
         Me.btnRecuperarPass = New System.Windows.Forms.Button()
@@ -67,10 +67,11 @@ Partial Class frmLogin
         Me.lblLogin = New System.Windows.Forms.Label()
         Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.Eli = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblContador = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlUsuarios.SuspendLayout()
-        Me.lblContador.SuspendLayout()
+        Me.flpUsuarios.SuspendLayout()
         Me.pnlRecuperarPass.SuspendLayout()
         Me.pnlLogin.SuspendLayout()
         Me.pnlContieneNumeros.SuspendLayout()
@@ -107,22 +108,22 @@ Partial Class frmLogin
         '
         'pnlUsuarios
         '
-        Me.pnlUsuarios.Controls.Add(Me.lblContador)
-        Me.pnlUsuarios.Controls.Add(Me.lblTituloSesion)
         Me.pnlUsuarios.Controls.Add(Me.pnlRecuperarPass)
-        Me.pnlUsuarios.Location = New System.Drawing.Point(171, 14)
+        Me.pnlUsuarios.Controls.Add(Me.flpUsuarios)
+        Me.pnlUsuarios.Controls.Add(Me.lblTituloSesion)
+        Me.pnlUsuarios.Location = New System.Drawing.Point(777, 64)
         Me.pnlUsuarios.Name = "pnlUsuarios"
-        Me.pnlUsuarios.Size = New System.Drawing.Size(1109, 723)
+        Me.pnlUsuarios.Size = New System.Drawing.Size(503, 554)
         Me.pnlUsuarios.TabIndex = 2
         '
-        'lblContador
+        'flpUsuarios
         '
-        Me.lblContador.Controls.Add(Me.pnlDibujarUser)
-        Me.lblContador.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblContador.Location = New System.Drawing.Point(0, 88)
-        Me.lblContador.Name = "lblContador"
-        Me.lblContador.Size = New System.Drawing.Size(1109, 535)
-        Me.lblContador.TabIndex = 0
+        Me.flpUsuarios.Controls.Add(Me.pnlDibujarUser)
+        Me.flpUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flpUsuarios.Location = New System.Drawing.Point(0, 88)
+        Me.flpUsuarios.Name = "flpUsuarios"
+        Me.flpUsuarios.Size = New System.Drawing.Size(503, 466)
+        Me.flpUsuarios.TabIndex = 0
         '
         'lblTituloSesion
         '
@@ -131,7 +132,7 @@ Partial Class frmLogin
         Me.lblTituloSesion.ForeColor = System.Drawing.Color.White
         Me.lblTituloSesion.Location = New System.Drawing.Point(0, 0)
         Me.lblTituloSesion.Name = "lblTituloSesion"
-        Me.lblTituloSesion.Size = New System.Drawing.Size(1109, 88)
+        Me.lblTituloSesion.Size = New System.Drawing.Size(503, 88)
         Me.lblTituloSesion.TabIndex = 2
         Me.lblTituloSesion.Text = "¿Quién esta iniciando sesión?"
         Me.lblTituloSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -140,9 +141,9 @@ Partial Class frmLogin
         '
         Me.pnlRecuperarPass.Controls.Add(Me.btnRecuperarPass)
         Me.pnlRecuperarPass.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlRecuperarPass.Location = New System.Drawing.Point(0, 623)
+        Me.pnlRecuperarPass.Location = New System.Drawing.Point(0, 454)
         Me.pnlRecuperarPass.Name = "pnlRecuperarPass"
-        Me.pnlRecuperarPass.Size = New System.Drawing.Size(1109, 100)
+        Me.pnlRecuperarPass.Size = New System.Drawing.Size(503, 100)
         Me.pnlRecuperarPass.TabIndex = 1
         '
         'btnRecuperarPass
@@ -499,7 +500,7 @@ Partial Class frmLogin
         '
         Me.cboCorreo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCorreo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCorreo.FormattingEnabled = True
         Me.cboCorreo.Location = New System.Drawing.Point(165, 65)
         Me.cboCorreo.Name = "cboCorreo"
@@ -634,15 +635,25 @@ Partial Class frmLogin
         Me.Eli.ReadOnly = True
         Me.Eli.Width = 661
         '
-        'Label1
+        'lblContador
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 298)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 21)
-        Me.Label1.TabIndex = 538
-        Me.Label1.Text = "lblContador"
+        Me.lblContador.AutoSize = True
+        Me.lblContador.ForeColor = System.Drawing.Color.White
+        Me.lblContador.Location = New System.Drawing.Point(14, 298)
+        Me.lblContador.Name = "lblContador"
+        Me.lblContador.Size = New System.Drawing.Size(92, 21)
+        Me.lblContador.TabIndex = 538
+        Me.lblContador.Text = "lblContador"
+        '
+        'lblPassword
+        '
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.ForeColor = System.Drawing.Color.White
+        Me.lblPassword.Location = New System.Drawing.Point(13, 339)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(93, 21)
+        Me.lblPassword.TabIndex = 539
+        Me.lblPassword.Text = "lblPassword"
         '
         'frmLogin
         '
@@ -650,9 +661,10 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1370, 749)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.dgvUsuarios)
+        Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.pnlUsuarios)
+        Me.Controls.Add(Me.lblContador)
+        Me.Controls.Add(Me.dgvUsuarios)
         Me.Controls.Add(Me.pnlLogin)
         Me.Controls.Add(Me.lblLogin)
         Me.Controls.Add(Me.pnlRestaurarPassword)
@@ -668,7 +680,7 @@ Partial Class frmLogin
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUsuarios.ResumeLayout(False)
-        Me.lblContador.ResumeLayout(False)
+        Me.flpUsuarios.ResumeLayout(False)
         Me.pnlRecuperarPass.ResumeLayout(False)
         Me.pnlLogin.ResumeLayout(False)
         Me.pnlContieneNumeros.ResumeLayout(False)
@@ -691,7 +703,7 @@ Partial Class frmLogin
     Friend WithEvents lblNombreSW As Label
     Friend WithEvents pnlUsuarios As Panel
     Friend WithEvents pnlRecuperarPass As Panel
-    Friend WithEvents lblContador As FlowLayoutPanel
+    Friend WithEvents flpUsuarios As FlowLayoutPanel
     Friend WithEvents lblTituloSesion As Label
     Friend WithEvents btnRecuperarPass As Button
     Friend WithEvents pnlLogin As Panel
@@ -731,5 +743,6 @@ Partial Class frmLogin
     Friend WithEvents lblLogin As Label
     Friend WithEvents dgvUsuarios As DataGridView
     Friend WithEvents Eli As DataGridViewImageColumn
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblContador As Label
+    Friend WithEvents lblPassword As Label
 End Class

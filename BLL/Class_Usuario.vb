@@ -81,7 +81,12 @@ Public Class Class_Usuario
         Return USUARIOS.GetDataValidarUser(user, pass)
     End Function
 
+    Public Function CorreosActivos() As DataTable
+        Return USUARIOS.GetDataCorreoActivos()
+    End Function
 
-
+    Public Function ObtenerPassword(ByVal correo As String)
+        Return USUARIOS.GetDataObtenerPassword(correo)
+    End Function
 
 End Class

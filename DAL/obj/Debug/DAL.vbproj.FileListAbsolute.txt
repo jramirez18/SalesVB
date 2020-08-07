@@ -2,9 +2,9 @@ H:\2020\VB\SistemaVentasVB_CAPAS\DAL\bin\Debug\DAL.dll.config
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\bin\Debug\DAL.dll
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\bin\Debug\DAL.pdb
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\bin\Debug\DAL.xml
-H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.Resources.resources
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.dll
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.xml
 H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.pdb
+H:\2020\VB\SistemaVentasVB_CAPAS\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache

@@ -1082,7 +1082,7 @@ Namespace DS_UsuariosTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(8) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(10) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "dbo.sp_ListarUsuarios"
@@ -1138,24 +1138,35 @@ Namespace DS_UsuariosTableAdapters
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(7).Connection = Me.Connection
-            Me._commandCollection(7).CommandText = "dbo.sp_ExistsUser"
+            Me._commandCollection(7).CommandText = "dbo.sp_UsersEmailsActivos"
             Me._commandCollection(7).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@login", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(8) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(8).Connection = Me.Connection
-            Me._commandCollection(8).CommandText = "dbo.sp_UpdateUser"
+            Me._commandCollection(8).CommandText = "dbo.sp_UserObtenerPassword"
             Me._commandCollection(8).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre_apellidos", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@login", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@icono", Global.System.Data.SqlDbType.Image, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre_icono", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rol", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(8).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mensaje", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.InputOutput, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(9) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(9).Connection = Me.Connection
+            Me._commandCollection(9).CommandText = "dbo.sp_ExistsUser"
+            Me._commandCollection(9).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(9).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@login", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(10).Connection = Me.Connection
+            Me._commandCollection(10).CommandText = "dbo.sp_UpdateUser"
+            Me._commandCollection(10).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre_apellidos", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@login", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@icono", Global.System.Data.SqlDbType.Image, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre_icono", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rol", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(10).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@mensaje", Global.System.Data.SqlDbType.NVarChar, 255, Global.System.Data.ParameterDirection.InputOutput, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1545,9 +1556,67 @@ Namespace DS_UsuariosTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy6(ByVal dataTable As DS_Usuarios.sp_ListarUsuariosDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataCorreoActivos() As DS_Usuarios.sp_ListarUsuariosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
+            Dim dataTable As DS_Usuarios.sp_ListarUsuariosDataTable = New DS_Usuarios.sp_ListarUsuariosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy7(ByVal dataTable As DS_Usuarios.sp_ListarUsuariosDataTable, ByVal correo As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(8)
+            If (correo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(correo,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataObtenerPassword(ByVal correo As String) As DS_Usuarios.sp_ListarUsuariosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(8)
+            If (correo Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(correo,String)
+            End If
+            Dim dataTable As DS_Usuarios.sp_ListarUsuariosDataTable = New DS_Usuarios.sp_ListarUsuariosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataUpdateUser(ByVal idUsuario As Global.System.Nullable(Of Integer), ByVal nombre_apellidos As String, ByVal login As String, ByVal password As String, ByVal icono() As Byte, ByVal nombre_icono As String, ByVal correo As String, ByVal rol As String, ByRef mensaje As String) As DS_Usuarios.sp_ListarUsuariosDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(8)
+            Me.Adapter.SelectCommand = Me.CommandCollection(10)
             If (idUsuario.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(idUsuario.Value,Integer)
             Else
@@ -1608,7 +1677,7 @@ Namespace DS_UsuariosTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function GetDataExistsUser(ByVal login As String) As Object
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(7)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(9)
             If (login Is Nothing) Then
                 command.Parameters(1).Value = Global.System.DBNull.Value
             Else
